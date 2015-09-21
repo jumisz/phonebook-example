@@ -1,0 +1,6 @@
+[
+ { "firstname": "John", "surname": "Smith", "phone": "+44-55555555" },
+  { "firstname": "Jane", "surname": "Doe", "phone": "+44-55555556", "address" : {"address1":"22 The Street", "address2" : "", "city": "London", "country": "United Kingdom", "postcode" : "WW11 2NN"}},
+ { "firstname": "Daniel", "surname": "Doe", "phone": "+44-55888556", "address" : {"address1":"24 Another Street", "address2" : "", "city": "Birmingham", "country": "United Kingdom", "postcode" : "BB1 4NJ"}}
+ ]
+ 
