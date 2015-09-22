@@ -1,9 +1,7 @@
 package com.jumisz.phonebook.dao;
 
-import org.mapdb.BTreeMap;
-import org.mapdb.DB;
-import org.mapdb.DBMaker;
-
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.ListMultimap;
 import com.jumisz.phonebook.model.PhoneBookEntry;
 
 /**
@@ -17,9 +15,8 @@ public class PhoneBookDAOFactory {
 	
 	
 	public static PhoneBookDAO newInstance() {
-		DB db = DBMaker.memoryDB().make();
-		BTreeMap<Integer, PhoneBookEntry> map = db.treeMap("phoneBook");
-		return new MapDBPhoneBookDAO(map);
+		ListMultimap<String, PhoneBookEntry> map = ArrayListMultimap.create();
+		return new MapPhoneBookDAO(map);
 	}
 
 }

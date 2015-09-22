@@ -7,6 +7,8 @@ import com.jumisz.phonebook.controller.PhoneBookController;
 import com.jumisz.phonebook.dao.PhoneBookDAO;
 import com.jumisz.phonebook.dao.PhoneBookDAOFactory;
 
+import spark.Spark;
+
 public final class Main {
 
 	private static final Logger LOG = LoggerFactory.getLogger(Main.class);
@@ -16,6 +18,7 @@ public final class Main {
 		PhoneBookDAO dao = PhoneBookDAOFactory.newInstance();
 		// Initialise API Services
 		new PhoneBookController(dao);
+		Spark.awaitInitialization();
 		LOG.info("Phonebook service started");
 	}
 
